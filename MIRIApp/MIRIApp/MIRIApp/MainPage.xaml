@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MIRIApp"
+             x:Class="MIRIApp.MainPage">
+
+    <Grid>
+
+        <Button x:Name="btn1" Text="QR" Clicked="OnClick"/>
+        <Button x:Name="btn2" Text="Button 2" Grid.Column="1" Clicked="OnClick"/>
+        <Button x:Name="btn3" Text="Button 3" Grid.Row="1" Clicked="OnClick"/>
+        <Button x:Name="btn4" Text="Button 4" Grid.Column="1" Grid.Row="1" Clicked="OnClick"/>
+        <Button x:name="btn5" Text="Button 5" Grid.Row="2" Clicked="OnClick"/>
+        <Button x:name="btn6" Text="Button 6 SETTINGS" Grid.Column="1" Grid.Row="2" Clicked="OnClick"/>
+
+
+
+
+    </Grid>
+
+</ContentPage>
