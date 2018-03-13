@@ -11,7 +11,7 @@
         <Button x:Name="btn3" Text="Button 3" Grid.Row="1" Clicked="OnClick"/>
         <Button x:Name="btn4" Text="Button 4" Grid.Column="1" Grid.Row="1" Clicked="OnClick"/>
         <Button x:name="btn5" Text="Button 5" Grid.Row="2" Clicked="OnClick"/>
-        <Button x:name="btn6" Text="Button 6 SETTINGS" Grid.Column="1" Grid.Row="2" Clicked="OnClick"/>
+        <Button x:name="btn6" Text="Settings" Grid.Column="1" Grid.Row="2" Clicked="OnClick"/>
 
 
 

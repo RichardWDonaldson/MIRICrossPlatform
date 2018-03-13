@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MIRIApp.QRPage">
+             x:Class="MIRIApp.SettingsPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="THIS IS THE QR PAGE. GET TO WORK BITCHES"
+            <Label Text="THIS WILL BE A SETTINGS PAGE"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="btnBack" Text="Back" Clicked="OnClick"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -13,8 +13,10 @@ namespace MIRIApp
 		{
 			InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
-		}
+          var MainPage = new NavigationPage(new MainPage());
+            Application.Current.MainPage = MainPage;
+           
+        }
 
 		protected override void OnStart ()
 		{

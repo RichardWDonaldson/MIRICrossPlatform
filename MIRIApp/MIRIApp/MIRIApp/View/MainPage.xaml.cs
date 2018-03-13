@@ -28,9 +28,18 @@ namespace MIRIApp
                     break;
                 case "btn2":
                     break;
+                case "Settings":
+                 await Navigation.PushAsync(new SettingsPage());   
+                    break;
+                 default:
+                    await this.DisplayAlert("Alert", "Error in Button Press", "Okay");
+                    break;
 
             }
         }
+
+
+       
 
 	}
 }

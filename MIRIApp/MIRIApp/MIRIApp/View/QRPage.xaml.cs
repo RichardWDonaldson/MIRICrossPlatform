@@ -16,5 +16,14 @@ namespace MIRIApp
 		{
 			InitializeComponent ();
 		}
-	}
+
+        async void OnClick(object Sender, EventArgs e)
+        {
+            await this.DisplayAlert("Alert", "You have pressed a button", "Yes", "No");
+            await Navigation.PopAsync();
+        }
+
+    }
+
+   
 }
