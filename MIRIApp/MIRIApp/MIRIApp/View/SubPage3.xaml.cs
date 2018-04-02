@@ -1,25 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace MIRIApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class QRPage : ContentPage
+	public partial class SubPage3 : ContentPage
 	{
-		public QRPage ()
+		public SubPage3 ()
 		{
 			InitializeComponent ();
 		}
 
         async void OnClick(object Sender, EventArgs e)
         {
-            //debug for button presses. remove on release
+            //debug for button press. remove on release
             await this.DisplayAlert("Alert", "You have pressed a button", "Yes", "No");
             await Navigation.PopAsync();
         }

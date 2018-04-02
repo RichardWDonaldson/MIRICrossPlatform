@@ -10,18 +10,21 @@ using Xamarin.Forms.Xaml;
 namespace MIRIApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SettingsPage : ContentPage
+	public partial class SubPage4 : ContentPage
 	{
-		public SettingsPage ()
+		public SubPage4 ()
 		{
 			InitializeComponent ();
 		}
 
         async void OnClick(object Sender, EventArgs e)
         {
-            // debug for button pushes. remove on release
-            await this.DisplayAlert("Alert", "You have pressed a button", "okay");
+            //debug for button press. remove on release
+            await this.DisplayAlert("Alert", "You have pressed a button", "Yes", "No");
             await Navigation.PopAsync();
         }
+
     }
+
+   
 }

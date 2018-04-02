@@ -16,6 +16,18 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="View\MainPage.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
+    <Compile Update="View\subPage4.xaml.cs">
+      <DependentUpon>SubPage4.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\subPage3.xaml.cs">
+      <DependentUpon>SubPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\subPage2.xaml.cs">
+      <DependentUpon>SubPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\subPage1.xaml.cs">
+      <DependentUpon>SubPage1.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
