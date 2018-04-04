@@ -6,13 +6,17 @@
 
     <Grid>
 
-        <Button x:Name="btn1" Text="sub 2" Grid.ColumnSpan="2" Clicked="OnClick" BackgroundColor="#4d50a1"  Opacity="0.5"/>
-        <!--<Button x:Name="btn2" Text="sub 1" Grid.Column="1" Clicked="OnClick"/>-->
+        <Button x:Name="btn1" Grid.ColumnSpan="2" BackgroundColor="#4d50a1"  Opacity="0.5"/>
         <Button x:Name="btn3" Text="QR" Grid.Row="1" Clicked="OnClick" BackgroundColor="#4d50a1"  Opacity="0.5"/>
         <Button x:Name="btn4" Text="sub 3" Grid.Column="1" Grid.Row="1" Clicked="OnClick" BackgroundColor="#4d50a1"  Opacity="0.5"/>
-        <Button x:name="btn5" Text="sub 4" Grid.Row="2" Clicked="OnClick" BackgroundColor="#4d50a1"  Opacity="0.5"/>
+        <Button x:name="btn5" Text="sub 4" Grid.Row="2" BackgroundColor="#4d50a1"  Opacity="0.5"/>
         <Button x:name="btn6" Text="Settings" Grid.Column="1" Grid.Row="2" Clicked="OnClick" BackgroundColor="#4d50a1"  Opacity="0.5"/>
-        
-    </Grid>
 
+        <!--Overlay for grid-->
+        <Grid>
+            <Button x:Name="overlay1" Grid.ColumnSpan="2" Grid.Row="0" BackgroundColor="Transparent" Image="@drawable/icon_button"/>
+        </Grid>
+
+    </Grid>
+    
 </ContentPage>

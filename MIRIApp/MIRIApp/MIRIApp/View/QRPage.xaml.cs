@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZXing.Common;
+using ZXing.Net.Mobile.Forms;
+using ZXing.QrCode;
+using ZXing.QrCode.Internal;
 
 namespace MIRIApp
 {
@@ -15,13 +19,24 @@ namespace MIRIApp
 		public QRPage ()
 		{
 			InitializeComponent ();
-		}
+            BindingContext = new ViewModel();
+        }
 
-        async void OnClick(object Sender, EventArgs e)
+        private async void Button_OnClicked(object sender, EventArgs e)
         {
-            //debug for button presses. remove on release
-            await this.DisplayAlert("Alert", "You have pressed a button", "Yes", "No");
-            await Navigation.PopAsync();
+            var scannerPage = new ZXingScannerPage();
+            await Navigation.PushAsync(scannerPage);
+
+            scannerPage.OnScanResult += (result) =>
+            {
+                scannerPage.IsScanning = false;
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    await Navigation.PopAsync();
+                    await DisplayAlert("Scanned Detail", result.Text, "OK");
+                });
+            };
+
         }
 
     }
