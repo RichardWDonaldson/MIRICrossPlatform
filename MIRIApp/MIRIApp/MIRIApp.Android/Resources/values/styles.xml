@@ -46,7 +46,7 @@
   <!-- splash screen theme -->
   <style name="splashTheme" parent="android:Theme">
     <!-- set drawable -->
-    <item name="android:windowBackground">@drawable/hexagon_cent</item>
+    <item name="android:windowBackground">@drawable/Emblem_cent</item>
     <item name="android:windowNoTitle">true</item>
   </style>
 

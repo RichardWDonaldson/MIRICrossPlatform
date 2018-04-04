@@ -96,7 +96,7 @@
     <AndroidResource Include="Resources\drawable\Backgr.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\hexagon_cent.xml" />
+    <AndroidResource Include="Resources\drawable\Emblem_cent.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Emblem.png" />
