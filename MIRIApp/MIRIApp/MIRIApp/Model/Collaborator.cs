@@ -26,5 +26,5 @@ namespace MIRIApp.Model
             return string.Format("[Person: id={0}, itemName={1}, collabName={2}, city={3}, country={4},description={5}, images={6}]", id, itemName, collabName, city, country, description, images);
         }
     }
-    }
+    
 }
