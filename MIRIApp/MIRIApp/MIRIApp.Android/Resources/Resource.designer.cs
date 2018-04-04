@@ -2238,10 +2238,10 @@ namespace MIRIApp.Droid
 			public const int Emblem = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int hexagon = 2130837597;
+			public const int Emblem_cent = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int hexagon_cent = 2130837598;
+			public const int hexagon = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
 			public const int ic_audiotrack_dark = 2130837599;

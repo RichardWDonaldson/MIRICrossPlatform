@@ -2,12 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MIRIApp.SubPage3">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="sub page 3"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Button x:Name="btnBack" Text="Back" Clicked="OnClick"/>
-        </StackLayout>
-    </ContentPage.Content>
+    <ListView x:Name="listView" Margin="20">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{Binding id}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" />
+                        <Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding collabName}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>
