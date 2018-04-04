@@ -12,7 +12,6 @@ namespace MIRIApp
 		public MainPage()
 		{
 			InitializeComponent();
-            
 		}
 
         async void OnClick(object Sender, EventArgs e)
@@ -29,20 +28,8 @@ namespace MIRIApp
                     await Navigation.PushAsync(new QRPage());
                     break;
 
-                case "sub 1":
-                    await Navigation.PushAsync(new SubPage1());
-                    break;
-
-                case "sub 2":
-                    await Navigation.PushAsync(new SubPage2());
-                    break;
-
                 case "sub 3":
                     await Navigation.PushAsync(new SubPage3());
-                    break;
-
-                case "sub 4":
-                    await Navigation.PushAsync(new SubPage4());
                     break;
 
                 case "Settings":
