@@ -6,9 +6,10 @@
              x:Class="MIRIApp.QRPage">
 
     <StackLayout>
-        <Label Text="Let's scan some QR Code"/>
+        
         <Button Text="Scan QR Code"
                 Clicked="Button_OnClicked">
+           
             <Button.IsVisible>
                 <OnPlatform x:TypeArguments="x:Boolean">
                     <On Platform="iOS" Value="True"/>
@@ -16,8 +17,9 @@
                     <On Platform="UWP" Value="True"/>
                 </OnPlatform>
             </Button.IsVisible>
+        
         </Button>
-        <Label Text=""></Label>
+              
         <Grid HeightRequest="200">
             <qrcode:ZXingBarcodeImageView x:Name="QRCode" 
                                           HeightRequest="100"

@@ -19,10 +19,6 @@ namespace MIRIApp
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-
-
-
         public EncodingOptions BarcodeOption => new EncodingOptions() { Height = 100, Width = 100, PureBarcode = true };
     }
 }

@@ -19,20 +19,20 @@ namespace MIRIApp
             // debug for button presses. remove on release
             await this.DisplayAlert("Alert", "You have pressed a button", "Yes", "No");
             Button button = (Button)Sender;
-            string buttonText = button.Text;
+            string buttonID = button.StyleId;
             
-            switch(buttonText)
+            switch(buttonID)
             {
                 // uses text value from button field in main xml NOT button name (took me a few tries to discover this BC)
                 case "QR":
                     await Navigation.PushAsync(new QRPage());
                     break;
 
-                case "sub 3":
+                case "WE":
                     await Navigation.PushAsync(new SubPage3());
                     break;
 
-                case "Settings":
+                case "SE":
                     await Navigation.PushAsync(new SettingsPage());   
                     break;
 
@@ -43,9 +43,5 @@ namespace MIRIApp
 
             }
         }
-
-
-       
-
 	}
 }

@@ -5,18 +5,29 @@
              x:Class="MIRIApp.MainPage">
 
     <Grid>
-
+    
+        <!-- Contains the headline -->
         <Button x:Name="btn1" Grid.ColumnSpan="2" BackgroundColor="#4d50a1"  Opacity="0.5"/>
-        <Button x:Name="btn3" Text="QR" Grid.Row="1" Clicked="OnClick" BackgroundColor="#4d50a1"  Opacity="0.5"/>
-        <Button x:Name="btn4" Text="sub 3" Grid.Column="1" Grid.Row="1" Clicked="OnClick" BackgroundColor="#4d50a1"  Opacity="0.5"/>
-        <Button x:name="btn5" Text="sub 4" Grid.Row="2" BackgroundColor="#4d50a1"  Opacity="0.5"/>
-        <Button x:name="btn6" Text="Settings" Grid.Column="1" Grid.Row="2" Clicked="OnClick" BackgroundColor="#4d50a1"  Opacity="0.5"/>
+        <Image Source="@drawable/Obser1" Grid.Column="0" Grid.Row="0" Margin="5,5,5,5"/>
+        <Label TextColor="AntiqueWhite" Grid.Column="1" Grid.Row="0" FontSize = "12.5" Text="The Royal Observatory, Edinburgh is unique among UK scientific establishments in that it houses on a single site a university astronomy research group, an establishment of a UK Research Council and a Visitor Centre." Margin="0,5,0,0" />
 
-        <!--Overlay for grid-->
-        <Grid>
-            <Button x:Name="overlay1" Grid.ColumnSpan="2" Grid.Row="0" BackgroundColor="Transparent" Image="@drawable/icon_button"/>
-        </Grid>
+        <!-- button 2 for layout button 3 for function [styleID set for MainPage.xaml.cs click handler] -->
+        <Button x:Name="btn2" Grid.Row="1" BackgroundColor="#4d50a1"  Opacity="0.5"/>
+        <Button x:Name="btn3" StyleId="QR" Image="QR_Symbol" Grid.Row="1" Clicked="OnClick" BorderColor="Transparent" BackgroundColor="Transparent"/>
+
+        <!-- button 4 for layout button 5 for function [styleID set for MainPage.xaml.cs click handler] -->
+        <Button x:Name="btn4" Grid.Column="1" Grid.Row="1" BackgroundColor="#4d50a1"  Opacity="0.5"/>
+        <Button x:Name="btn5" StyleId ="WE" Image="Website_Symbol" HeightRequest="50" WidthRequest="50" Grid.Column="1" Grid.Row="1" Clicked="OnClick" BorderColor="Transparent" BackgroundColor="Transparent"/>
+
+        <!-- button 6 for layout button 7 for function [styleID set for MainPage.xaml.cs click handler] -->
+        <Button x:name="btn6" Grid.Row="2" BackgroundColor="#4d50a1"  Opacity="0.5"/>
+        <Button x:name="btn7" StyleId="BR" Image="Burger_Symbol" HeightRequest="50" WidthRequest="50" Grid.Row="2" BorderColor="Transparent" BackgroundColor="Transparent"/>
+
+        <!-- button 8 for layout button 9 for function [styleID set for MainPage.xaml.cs click handler] -->
+        <Button x:name="btn8" Grid.Column="1" Grid.Row="2" BackgroundColor="#4d50a1"  Opacity="0.5"/>
+        <Button x:name="btn9" StyleId="SE" Image="Settings_Symbol" HeightRequest="50" WidthRequest="50" Grid.Column="1" Grid.Row="2" Clicked="OnClick" BorderColor="Transparent" BackgroundColor="Transparent"/>
 
     </Grid>
-    
+
+
 </ContentPage>
