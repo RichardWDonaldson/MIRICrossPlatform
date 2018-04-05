@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>MIRIApp.Droid</RootNamespace>
     <AssemblyName>MIRIApp.Android</AssemblyName>
-    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -68,7 +68,6 @@
     <Compile Include="Splash.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Resources\raw\Collaborators.db" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>

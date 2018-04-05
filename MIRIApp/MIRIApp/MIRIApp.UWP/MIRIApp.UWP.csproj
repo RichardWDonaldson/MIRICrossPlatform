@@ -103,6 +103,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Assets\Collaborators.db" />
     <None Include="MIRIApp.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

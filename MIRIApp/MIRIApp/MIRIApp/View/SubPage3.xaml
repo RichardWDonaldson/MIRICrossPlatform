@@ -7,8 +7,8 @@
             <DataTemplate>
                 <ViewCell>
                     <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <Label Text="{Binding id}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" />
-                        <Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding collabName}" />
+                        <Label Text="{Binding itemName}}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" />
+                     
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>

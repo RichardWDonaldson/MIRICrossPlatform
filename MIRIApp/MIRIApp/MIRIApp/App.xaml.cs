@@ -6,18 +6,21 @@ using System.Text;
 using Xamarin.Forms;
 using MIRIApp.Data;
 using Xamarin.Forms.Xaml;
+using System.IO;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MIRIApp
 {
 	public partial class App : Application
 	{
-        static CollabDatabase database;
-		public App ()
+        private static CollabDatabase database;
+        
+       
+        public App ()
 		{
 			InitializeComponent();
-
-          var MainPage = new NavigationPage(new MainPage());
+         
+            var MainPage = new NavigationPage(new MainPage());
             Application.Current.MainPage = MainPage;
            
         }
@@ -28,8 +31,12 @@ namespace MIRIApp
             {
                 if (database == null)
                 {
+                    // var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                    //path = Path.Combine(path, "Collaborators.db");
+                    
                     database = new CollabDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("Collaborators.db3"));
-                    Console.Write("App.xaml.cs Create Database");
+                    Console.Write("App.xaml.cs Create Database");          
+                 
                 }
                 Console.Write("App.xaml.cs returned database");
                 return database;
@@ -42,7 +49,8 @@ namespace MIRIApp
 
         protected override void OnStart ()
 		{
-			// Handle when your app starts
+           
+			
 		}
 
 		protected override void OnSleep ()

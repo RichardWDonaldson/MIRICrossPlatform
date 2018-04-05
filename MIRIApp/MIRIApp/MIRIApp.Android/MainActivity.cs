@@ -19,11 +19,16 @@ namespace MIRIApp.Droid
 
             base.OnCreate(bundle);
 
+
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
 
             //Initialize QR Code Service
             ZXing.Net.Mobile.Forms.Android.Platform.Init();
+
+
+
         }
     }
 }
