@@ -2,12 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MIRIApp.SubPage3">
-    <ListView x:Name="listView" Margin="20">
+    <ListView x:Name="listView" Margin="20" ItemTapped="OnListItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <Label Text="{Binding itemName}}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" />
+                        <Label Text="{Binding itemName}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" />
                      
                     </StackLayout>
                 </ViewCell>

@@ -20,7 +20,7 @@ namespace MIRIApp.Data
                 database = new SQLiteAsyncConnection(dbPath);
                 Console.Write("database is connected");
                database.CreateTableAsync<Collaborator>().Wait();
-                //Populate();
+                Populate();
             } catch (SQLiteException e)
             {
                 Console.Write("SQLite ERROR ");
@@ -36,18 +36,20 @@ namespace MIRIApp.Data
 
         public void Populate()
         {
-            
-            Collaborator c1 = new Collaborator();
-            c1.itemName = "contamination-control-cover";
-            c1.collabName = "Paul Scherrer Institute";
-            c1.city = "Villigen";
-            c1.country = "Switzerland";
-            c1.description = "This cover is placed in the entrance optical path of MIRI right after the picko. " +
+
+            Collaborator c1 = new Collaborator
+            {
+                itemName = "contamination-control-cover",
+                collabName = "Paul Scherrer Institute",
+                city = "Villigen",
+                country = "Switzerland",
+                description = "This cover is placed in the entrance optical path of MIRI right after the picko. " +
                 "mirror (POM) and will be closed during the instruments cool down phase and at MIRIs operational " +
                 "temperature each time the POM is heated up for decontamination. The CCC will be used further as an optical shutter " +
                 "for dark sky calibration and for the protection against latency images which might emerge from coronagraphic filter " +
-                "changes.";
-            c1.images = 4;
+                "changes.",
+                images = 4
+            };
             database.InsertAsync(c1);
 
             Collaborator c2 = new Collaborator

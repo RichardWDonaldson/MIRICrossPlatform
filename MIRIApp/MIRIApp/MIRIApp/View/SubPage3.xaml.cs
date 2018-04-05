@@ -6,18 +6,20 @@ using SQLite;
 using System.Collections.ObjectModel;
 using MIRIApp.Model;
 using System.Collections.Generic;
+using MIRIApp.View;
 
 namespace MIRIApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SubPage3 : ContentPage
 	{
-        
-      
+
+       
 
         public SubPage3 ()
 		{
 			InitializeComponent ();
+
 
         }
 
@@ -36,9 +38,21 @@ namespace MIRIApp
             await Navigation.PopAsync();
         }
 
+       async void OnListItemSelected(object Sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem != null)
+            {
+                await Navigation.PushAsync(new ItemPage
+                {
+                    BindingContext = e.SelectedItem as Collaborator
+                });
+            }
+        }
+
         
+		
 
 
     }
 
-}   
+} 
