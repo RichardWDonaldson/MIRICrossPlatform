@@ -17,7 +17,7 @@ namespace MIRIApp
         async void OnClick(object Sender, EventArgs e)
         {
             // debug for button presses. remove on release
-            await this.DisplayAlert("Alert", "You have pressed a button", "Yes", "No");
+           // await this.DisplayAlert("Alert", "You have pressed a button", "Yes", "No");
             Button button = (Button)Sender;
             string buttonID = button.StyleId;
             

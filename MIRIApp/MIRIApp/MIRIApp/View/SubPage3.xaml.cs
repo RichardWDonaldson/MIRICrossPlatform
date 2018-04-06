@@ -34,17 +34,18 @@ namespace MIRIApp
         async void OnClick(object Sender, EventArgs e)
         {
             //debug for button press. remove on release
-            await this.DisplayAlert("Alert", "You have pressed a button", "Yes", "No");
+            // await this.DisplayAlert("Alert", "You have pressed a button", "Yes", "No");
             await Navigation.PopAsync();
         }
 
-       async void OnListItemSelected(object Sender, SelectedItemChangedEventArgs e)
+        private async void OnListItemSelected(object Sender, ItemTappedEventArgs e)
         {
-            if (e.SelectedItem != null)
+            if (e.Item != null)
             {
+
                 await Navigation.PushAsync(new ItemPage
                 {
-                    BindingContext = e.SelectedItem as Collaborator
+                    BindingContext = e.Item as Collaborator
                 });
             }
         }
