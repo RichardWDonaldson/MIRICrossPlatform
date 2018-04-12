@@ -35,7 +35,8 @@ namespace MIRIApp
                     //path = Path.Combine(path, "Collaborators.db");
                     
                     database = new CollabDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("Collaborators.db3"));
-                    Console.Write("App.xaml.cs Create Database");          
+                    Console.Write("App.xaml.cs Create Database");     
+                    
                  
                 }
                 Console.Write("App.xaml.cs returned database");

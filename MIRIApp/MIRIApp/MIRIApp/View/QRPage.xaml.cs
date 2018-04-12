@@ -20,8 +20,9 @@ namespace MIRIApp
 	public partial class QRPage : ContentPage
 	{
         string[] split;
-       
-		public QRPage ()
+        
+
+        public QRPage()
 		{
 			InitializeComponent ();
             BindingContext = new ViewModel();
@@ -29,6 +30,7 @@ namespace MIRIApp
 
         private async void Button_OnClicked(object sender, EventArgs e)
         {
+            List<Collaborator> list = await App.Database.GetCollaboratorAsync();
             var scannerPage = new ZXingScannerPage();
             await Navigation.PushAsync(scannerPage);
 
@@ -41,32 +43,48 @@ namespace MIRIApp
                     await DisplayAlert("Scanned Detail", result.Text, "OK");
                     char[] splitChar = { '/' };
                     split = result.Text.Split(splitChar);
-                    await DisplayAlert("Scanned Detail", split[0], "OK");
-                    await DisplayAlert("Scanned Detail", split[1], "OK");
+                    Collaborator chosenCollab = FindCollaborator(list);
 
-                    List<Collaborator> list = await App.Database.GetCollaboratorAsync();
-                    
-                    foreach(var Collaborator in list)
+                    if(chosenCollab != null)
                     {
-                        if((Collaborator.id == int.Parse(split[0])) && (Collaborator.itemName == split[1]))
+                        await Navigation.PushAsync(new ItemPage
                         {
-                            await DisplayAlert("Found", "Item Found", "OK");
-                            await Navigation.PushAsync(new ItemPage
-                            {
-                                BindingContext = Collaborator as Collaborator
-                            });
-                        } else
-                        {
-                            await DisplayAlert("Not found", "Item not found", "OK");
-                        }
+                            BindingContext = chosenCollab as Collaborator
+
+                        });
+
+                    } else
+                    {
+                       await DisplayAlert("Invalid QR Code", "Invalid QR Code - Please try again", "OK");
                     }
+
+
+
+
 
                 });
             };
 
-           
+        }
+
+        private Collaborator FindCollaborator(List<Collaborator> list)
+        {
+            foreach (var Collaborator in list)
+            {
+
+                if ((Collaborator.id == int.Parse(split[0])) && (Collaborator.itemName == split[1]))
+                {
+                    return Collaborator;
+
+                }
+            }
+            return null;
+
+
 
         }
+
+        
 
     }
 

@@ -11,7 +11,7 @@ namespace MIRIApp.Data
   public class CollabDatabase
     {
       public readonly SQLiteAsyncConnection database;
-
+        private List<Collaborator> collaboratorList;
         public CollabDatabase(string dbPath)
         {
             try
@@ -19,26 +19,40 @@ namespace MIRIApp.Data
                 
                 database = new SQLiteAsyncConnection(dbPath);
                 Console.Write("database is connected");
-               database.CreateTableAsync<Collaborator>().Wait();
+                
+                database.DropTableAsync<Collaborator>().Wait();
+                database.CreateTableAsync<Collaborator>().Wait();
+
                 Populate();
             } catch (SQLiteException e)
             {
                 Console.Write("SQLite ERROR ");
+                Console.Write(e);
             }
           
             Console.Write("Database has populated");
         }
+
+        public List<Collaborator> CollaboratorList { get => collaboratorList; set => collaboratorList = value; }
 
         public Task<List<Collaborator>> GetCollaboratorAsync()
         {
             return database.Table<Collaborator>().ToListAsync();
         }
 
-        public void Populate()
-        {
+  
+        
 
-            Collaborator c1 = new Collaborator
+
+
+        public async void Populate()
+        {
+             CollaboratorList = new List<Collaborator>()
             {
+
+
+             new Collaborator()
+             {
                 itemName = "contamination-control-cover",
                 collabName = "Paul Scherrer Institute",
                 city = "Villigen",
@@ -49,10 +63,10 @@ namespace MIRIApp.Data
                 "for dark sky calibration and for the protection against latency images which might emerge from coronagraphic filter " +
                 "changes.",
                 images = 4
-            };
-            database.InsertAsync(c1);
+            },
 
-            Collaborator c2 = new Collaborator
+
+            new Collaborator()
             {
                 itemName = "detectors",
                 collabName = "NASA Jet Propulsion Laboratory (JPL)",
@@ -62,10 +76,10 @@ namespace MIRIApp.Data
                 "when photons are absorbed. These arsenic-doped silicon impurity band conduction (Si:As IBC) devices are sensitive to electromagnetic " +
                 "radiation from 5 to 28.5 micrometres.",
                 images = 2
-            };
-            database.InsertAsync(c2);
+            },
 
-            Collaborator c3 = new Collaborator
+
+            new Collaborator()
             {
                 itemName = "electronics",
                 collabName = "Centre Spatial de Liege",
@@ -73,10 +87,10 @@ namespace MIRIApp.Data
                 country = "Belgium",
                 description = "To interface and provide control to all instrument systems.",
                 images = 4
-            };
-            database.InsertAsync(c3);
+            },
 
-            Collaborator c4 = new Collaborator
+
+            new Collaborator()
             {
                 itemName = "imager",
                 collabName = "CEA",
@@ -87,10 +101,10 @@ namespace MIRIApp.Data
                 "bright targets, as well as a variety of dither patterns that could improve sampling at the shortest wavelengths, remove detector artifacts and cosmic ray hits, " +
                 "and facilitate self - calibration.",
                 images = 3
-            };
-            database.InsertAsync(c4);
+            },
 
-            Collaborator c5 = new Collaborator
+
+             new Collaborator()
             {
                 itemName = "input-optics",
                 collabName = "Centre Spatial de Liege",
@@ -100,10 +114,10 @@ namespace MIRIApp.Data
                 "It also contains a Contamination Control Cover mechanism (provides by the Paul Scherrer Institute (PSI) in Switzerland) which ensure the sensitive optical " +
                 "surface stay clean throughout the mission",
                 images = 1
-            };
-            database.InsertAsync(c5);
+            },
 
-            Collaborator c6 = new Collaborator
+
+            new Collaborator()
             {
                 itemName = "mechanisms",
                 collabName = "MPIA",
@@ -116,10 +130,10 @@ namespace MIRIApp.Data
                 "to 18 positions on the filter wheel (see Fig. 1) include: reliable operation at T ~ 7 K, optical precision of < 4 arcsec, low power dissipation, vibration " +
                 "capability up to 13.5 Grms and full functionality in the temperature range 6 K < T < 300 K",
                 images = 2
-            };
-            database.InsertAsync(c6);
+            },
 
-            Collaborator c7 = new Collaborator
+
+            new Collaborator()
             {
                 itemName = "optical-bench-assembly",
                 collabName = "ASTRIUM, UKATC, CCLRC, JPL",
@@ -127,10 +141,10 @@ namespace MIRIApp.Data
                 country = "Various",
                 description = "All the optics put together",
                 images = 3
-            };
-            database.InsertAsync(c7);
+            },
 
-            Collaborator c8 = new Collaborator
+
+            new Collaborator()
             {
                 itemName = "simulator",
                 collabName = "INTA",
@@ -138,8 +152,12 @@ namespace MIRIApp.Data
                 country = "Spain",
                 description = "Deliver a test beam to MIRI similar to the output beam of the JWST and in similar conditions to the flight",
                 images = 1
+            }
+
+
             };
-            database.InsertAsync(c8);
+
+            await database.InsertAllAsync(CollaboratorList);
         }
 
 

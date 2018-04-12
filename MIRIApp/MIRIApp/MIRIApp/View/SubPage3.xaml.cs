@@ -23,12 +23,12 @@ namespace MIRIApp
 
         }
 
-        protected override async void OnAppearing()
+        protected override void OnAppearing()
         {
             base.OnAppearing();
             Console.Write("Appearing! ");
 
-            listView.ItemsSource = await App.Database.GetCollaboratorAsync();
+            listView.ItemsSource = App.Database.CollaboratorList;
         }
 
         async void OnClick(object Sender, EventArgs e)
@@ -49,6 +49,9 @@ namespace MIRIApp
                 });
             }
         }
+
+
+     
 
         
 		

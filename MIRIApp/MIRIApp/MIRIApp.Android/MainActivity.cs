@@ -4,7 +4,7 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.Views;
-using Android.Widget;
+using Android.Widget;                                           
 using Android.OS;
 
 namespace MIRIApp.Droid
@@ -22,6 +22,7 @@ namespace MIRIApp.Droid
 
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            
             LoadApplication(new App());
 
             //Initialize QR Code Service
@@ -30,6 +31,22 @@ namespace MIRIApp.Droid
 
 
         }
+
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+
+            if (ZXing.Net.Mobile.Android.PermissionsHandler.NeedsPermissionRequest(this))
+                ZXing.Net.Mobile.Android.PermissionsHandler.RequestPermissionsAsync(this);
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
+        {
+            global::ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+
     }
 }
 

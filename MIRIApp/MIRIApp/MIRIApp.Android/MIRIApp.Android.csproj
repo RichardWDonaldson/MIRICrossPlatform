@@ -68,7 +68,6 @@
     <Compile Include="Splash.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Resources\raw\Collaborators.db" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
@@ -123,6 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Burger_Symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\raw\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
