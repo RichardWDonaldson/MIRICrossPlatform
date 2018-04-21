@@ -10,13 +10,13 @@
                     <ColumnDefinition Width="3*" />
                     <ColumnDefinition Width="7*" />
                 </Grid.ColumnDefinitions>
-                <Label Text="Item:" TextColor="AntiqueWhite" Grid.Column="0" Grid.Row="0" />
+                <Label Text=" Item:" TextColor="AntiqueWhite" Grid.Column="0" Grid.Row="0" />
                 <Label Text="{Binding itemName}" TextColor="AntiqueWhite" Grid.Column="1" Grid.Row="0" />
-                <Label Text="Centre(s):" TextColor="AntiqueWhite" Grid.Column="0" Grid.Row="1" />
+                <Label Text=" Centre(s):" TextColor="AntiqueWhite" Grid.Column="0" Grid.Row="1" />
                 <Label Text="{Binding collabName}" TextColor="AntiqueWhite" Grid.Column="1" Grid.Row="1"/>
-                <Label Text="City:" TextColor="AntiqueWhite" Grid.Column="0" Grid.Row="2" />
+                <Label Text=" City:" TextColor="AntiqueWhite" Grid.Column="0" Grid.Row="2" />
                 <Label Text="{Binding city}" TextColor="AntiqueWhite" Grid.Column="1" Grid.Row="2"/>
-                <Label Text="Country:" TextColor="AntiqueWhite" Grid.Column="0" Grid.Row="3" />
+                <Label Text=" Country:" TextColor="AntiqueWhite" Grid.Column="0" Grid.Row="3" />
                 <Label Text="{Binding country}" TextColor="AntiqueWhite" Grid.Column="1" Grid.Row="3"/>
             </Grid>
             <Image Source="ccc001" BackgroundColor="#804d50a1" Margin="5,5,5,5"></Image>

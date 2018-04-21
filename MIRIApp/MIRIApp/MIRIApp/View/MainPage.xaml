@@ -11,13 +11,13 @@
         <Image Source="@drawable/Obser1" Grid.Column="0" Grid.Row="0" Margin="5,5,5,5"/>
         <Label TextColor="AntiqueWhite" Grid.Column="1" Grid.Row="0" FontSize = "12.5" Text="The Royal Observatory, Edinburgh is unique among UK scientific establishments in that it houses on a single site a university astronomy research group, an establishment of a UK Research Council and a Visitor Centre." Margin="0,5,0,0" />
         <!-- button 2 for layout button 3 for function [styleID set for MainPage.xaml.cs click handler] -->
-        <Button x:Name="btn3" StyleId="QR" Image="QR_Symbol" Grid.Row="1" Clicked="OnClick" BorderColor="Transparent" BackgroundColor="#804d50a1"/>
+        <Button x:Name="btn3" StyleId="QR" Image="ic_camera" Grid.Row="1" Clicked="OnClick" BorderColor="Transparent" BackgroundColor="#804d50a1"/>
         <!-- button 4 for layout button 5 for function [styleID set for MainPage.xaml.cs click handler] -->
-        <Button x:Name="btn5" StyleId ="WE" Image="Website_Symbol" HeightRequest="50" WidthRequest="50" Grid.Column="1" Grid.Row="1" Clicked="OnClick" BorderColor="Transparent" BackgroundColor="#804d50a1"/>
+        <Button x:Name="btn5" StyleId ="WE" Image="ic_language" HeightRequest="50" WidthRequest="50" Grid.Column="1" Grid.Row="1" Clicked="OnClick" BorderColor="Transparent" BackgroundColor="#804d50a1"/>
         <!-- button 6 for layout button 7 for function [styleID set for MainPage.xaml.cs click handler] -->
-        <Button x:name="btn7" StyleId="BR" Image="Burger_Symbol" HeightRequest="50" WidthRequest="50" Grid.Row="2" Clicked="OnClick" BorderColor="Transparent" BackgroundColor="#804d50a1"/>
+        <Button x:name="btn7" StyleId="BR" Image="ic_list" HeightRequest="50" WidthRequest="50" Grid.Row="2" Clicked="OnClick" BorderColor="Transparent" BackgroundColor="#804d50a1"/>
         <!-- button 8 for layout button 9 for function [styleID set for MainPage.xaml.cs click handler] -->
-        <Button x:name="btn9" StyleId="SE" Image="Settings_Symbol" HeightRequest="50" WidthRequest="50" Grid.Column="1" Grid.Row="2" Clicked="OnClick" BorderColor="Transparent" BackgroundColor="#804d50a1"/>
+        <Button x:name="btn9" StyleId="SE" Image="ic_info" HeightRequest="50" WidthRequest="50" Grid.Column="1" Grid.Row="2" Clicked="OnClick" BorderColor="Transparent" BackgroundColor="#804d50a1"/>
 
     </Grid>
 
