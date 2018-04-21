@@ -18,10 +18,9 @@ namespace MIRIApp.View
 
             InitializeComponent();
 
-    
-
-
 
         }
+
+       
     }
 }

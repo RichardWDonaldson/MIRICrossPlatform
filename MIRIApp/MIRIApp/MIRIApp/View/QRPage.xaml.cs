@@ -20,15 +20,32 @@ namespace MIRIApp
     public partial class QRPage : ContentPage
     {
         string[] split;
-
+        bool state = false;
+        public bool itemScanned = false;
 
         public QRPage()
         {
             InitializeComponent();
             BindingContext = new ViewModel();
-        }
+            
+        }   
 
-        protected override async void OnAppearing()
+        protected override void OnAppearing()
+        {
+            if(!state)
+            {
+               
+               ScanningPage();
+                state = true;
+
+            } else
+            {
+                //Navigation.PopAsync();
+            }
+         }
+    
+
+        private async void ScanningPage()
         {
             List<Collaborator> list = await App.Database.GetCollaboratorAsync();
             var scannerPage = new ZXingScannerPage();
@@ -40,15 +57,17 @@ namespace MIRIApp
                 Device.BeginInvokeOnMainThread(async () =>
                 {
                     await Navigation.PopAsync();
-                    await DisplayAlert("Scanned Detail", result.Text, "OK");
+                  //  await DisplayAlert("Scanned Detail", result.Text, "OK");
                     char[] splitChar = { '/' };
                     split = result.Text.Split(splitChar);
                     Collaborator chosenCollab = FindCollaborator(list);
 
                     if (chosenCollab != null)
                     {
+                        
                         await Navigation.PushAsync(new ItemPage
                         {
+                            
                             BindingContext = chosenCollab as Collaborator
 
                         });
@@ -65,8 +84,8 @@ namespace MIRIApp
 
                 });
             };
-         }
-    
+        }
+
 
         private async void Button_OnClicked(object sender, EventArgs e)
         {
@@ -124,9 +143,19 @@ namespace MIRIApp
 
         }
 
+        protected override bool OnBackButtonPressed()
+        {
+           // Navigation.PopAsync();
+                
+            Navigation.PushAsync(new MainPage());
+            base.OnBackButtonPressed();
+            return false;
+         }
+
         
+
 
     }
 
-   
+
 }
