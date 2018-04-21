@@ -9,17 +9,7 @@ namespace MIRIApp
 	{
 		public SubPage2 ()
 		{
-			InitializeComponent ();
-		}
-
-        async void OnClick(object Sender, EventArgs e)
-        {
-            //debug for button press. remove on release
-            await this.DisplayAlert("Alert", "You have pressed a button", "Yes", "No");
-            await Navigation.PopAsync();
+			InitializeComponent();
         }
-
     }
-
-   
 }
