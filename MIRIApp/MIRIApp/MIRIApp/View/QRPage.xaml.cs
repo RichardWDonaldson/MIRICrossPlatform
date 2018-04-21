@@ -100,7 +100,7 @@ namespace MIRIApp
 
         private async void Button_OnClicked(object sender, EventArgs e)
         {
-            List<Collaborator> list = await App.Database.GetCollaboratorAsync();
+           
             var scannerPage = new ZXingScannerPage();
             await Navigation.PushAsync(scannerPage);
 
@@ -110,10 +110,10 @@ namespace MIRIApp
                 Device.BeginInvokeOnMainThread(async () =>
                 {
                     await Navigation.PopAsync();
-                  //  await DisplayAlert("Scanned Detail", result.Text, "OK");
+
                     char[] splitChar = { '/' };
                     split = result.Text.Split(splitChar);
-                    Collaborator chosenCollab = FindCollaborator(list);
+                    Collaborator chosenCollab = FindCollaborator(await App.Database.GetCollaboratorAsync());
 
                     if (chosenCollab != null)
                     {

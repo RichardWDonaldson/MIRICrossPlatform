@@ -38,6 +38,8 @@ namespace MIRIApp.Data
             return database.Table<Collaborator>().ToListAsync();
         }
 
+        
+
         public async Task<bool> TableExists(SQLiteAsyncConnection connection)
         {
            

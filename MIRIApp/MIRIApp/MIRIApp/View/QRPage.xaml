@@ -11,7 +11,8 @@
                 Text="Scan Again?"
                 Clicked="Button_OnClicked"
                 BorderColor="Transparent" 
-                BackgroundColor="#804d50a1">
+                BackgroundColor="#804d50a1"
+                TextColor="AntiqueWhite">
            
             <Button.IsVisible>
                 <OnPlatform x:TypeArguments="x:Boolean">

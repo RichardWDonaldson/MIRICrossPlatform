@@ -7,6 +7,8 @@ using Xamarin.Forms;
 using MIRIApp.Data;
 using Xamarin.Forms.Xaml;
 using System.IO;
+using MIRIApp.Model;
+using System.Threading.Tasks;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MIRIApp
@@ -15,6 +17,7 @@ namespace MIRIApp
 	{
         private static CollabDatabase database;
         
+        
        
         public App ()
 		{
@@ -22,7 +25,7 @@ namespace MIRIApp
          
             var MainPage = new NavigationPage(new MainPage());
             Application.Current.MainPage = MainPage;
-           
+            
         }
 
         public static CollabDatabase Database
@@ -45,8 +48,9 @@ namespace MIRIApp
             }
         }
 
+        
 
-
+      
 
         protected override void OnStart ()
 		{
