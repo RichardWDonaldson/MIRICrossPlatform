@@ -7,8 +7,11 @@
 
     <StackLayout>
         
-        <Button Text="Scan QR Code"
-                Clicked="Button_OnClicked">
+        <Button x:Name="QRButton" 
+                Text="Scan Again?"
+                Clicked="Button_OnClicked"
+                BorderColor="Transparent" 
+                BackgroundColor="#804d50a1">
            
             <Button.IsVisible>
                 <OnPlatform x:TypeArguments="x:Boolean">
