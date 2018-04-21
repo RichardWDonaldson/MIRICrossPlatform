@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Xamarin.Forms;
 
 namespace MIRIApp.Droid
 {
@@ -18,7 +19,7 @@ namespace MIRIApp.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+          
             StartActivity(typeof(MainActivity));
         }
     }
