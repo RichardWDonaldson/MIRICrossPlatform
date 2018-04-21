@@ -16,19 +16,19 @@ using ZXing.QrCode.Internal;
 
 namespace MIRIApp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class QRPage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class QRPage : ContentPage
+    {
         string[] split;
-        
+
 
         public QRPage()
-		{
-			InitializeComponent ();
+        {
+            InitializeComponent();
             BindingContext = new ViewModel();
         }
 
-        private async void Button_OnClicked(object sender, EventArgs e)
+        protected override async void OnAppearing()
         {
             List<Collaborator> list = await App.Database.GetCollaboratorAsync();
             var scannerPage = new ZXingScannerPage();
@@ -45,7 +45,7 @@ namespace MIRIApp
                     split = result.Text.Split(splitChar);
                     Collaborator chosenCollab = FindCollaborator(list);
 
-                    if(chosenCollab != null)
+                    if (chosenCollab != null)
                     {
                         await Navigation.PushAsync(new ItemPage
                         {
@@ -53,9 +53,10 @@ namespace MIRIApp
 
                         });
 
-                    } else
+                    }
+                    else
                     {
-                       await DisplayAlert("Invalid QR Code", "Invalid QR Code - Please try again", "OK");
+                        await DisplayAlert("Invalid QR Code", "Invalid QR Code - Please try again", "OK");
                     }
 
 
@@ -64,6 +65,45 @@ namespace MIRIApp
 
                 });
             };
+         }
+    
+
+        private async void Button_OnClicked(object sender, EventArgs e)
+        {
+            //List<Collaborator> list = await App.Database.GetCollaboratorAsync();
+            //var scannerPage = new ZXingScannerPage();
+            //await Navigation.PushAsync(scannerPage);
+
+            //scannerPage.OnScanResult += (result) =>
+            //{
+            //    scannerPage.IsScanning = false;
+            //    Device.BeginInvokeOnMainThread(async () =>
+            //    {
+            //        await Navigation.PopAsync();
+            //        await DisplayAlert("Scanned Detail", result.Text, "OK");
+            //        char[] splitChar = { '/' };
+            //        split = result.Text.Split(splitChar);
+            //        Collaborator chosenCollab = FindCollaborator(list);
+
+            //        if(chosenCollab != null)
+            //        {
+            //            await Navigation.PushAsync(new ItemPage
+            //            {
+            //                BindingContext = chosenCollab as Collaborator
+
+            //            });
+
+            //        } else
+            //        {
+            //           await DisplayAlert("Invalid QR Code", "Invalid QR Code - Please try again", "OK");
+            //        }
+
+
+
+
+
+               // });
+            //};
 
         }
 

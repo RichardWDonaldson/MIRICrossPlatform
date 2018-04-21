@@ -12,18 +12,25 @@ namespace MIRIApp.Data
     {
       public readonly SQLiteAsyncConnection database;
         private List<Collaborator> collaboratorList;
+        private Task<bool> test;
         public CollabDatabase(string dbPath)
         {
             try
             {
                 
                 database = new SQLiteAsyncConnection(dbPath);
-                Console.Write("database is connected");
-                
-                database.DropTableAsync<Collaborator>().Wait();
-                database.CreateTableAsync<Collaborator>().Wait();
 
-                Populate();
+               
+                
+                    database.CreateTableAsync<Collaborator>().Wait();
+                    Populate();
+                
+              //  database.DropTableAsync<Collaborator>().Wait();
+                
+
+              //  Populate();
+
+
             } catch (SQLiteException e)
             {
                 Console.Write("SQLite ERROR ");
@@ -40,8 +47,8 @@ namespace MIRIApp.Data
             return database.Table<Collaborator>().ToListAsync();
         }
 
+
   
-        
 
 
 

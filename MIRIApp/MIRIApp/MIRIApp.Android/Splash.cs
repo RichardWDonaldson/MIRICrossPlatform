@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace MIRIApp.Droid
 {
-    [Activity(Label = "Splash", Theme = "@style/splashTheme", MainLauncher = true, NoHistory = true)]
+    [Activity(Label = "MIRI", Theme = "@style/splashTheme", MainLauncher = true, NoHistory = true)]
     public class Splash : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
