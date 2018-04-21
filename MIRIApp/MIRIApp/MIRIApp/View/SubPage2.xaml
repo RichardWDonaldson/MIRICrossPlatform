@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MIRIApp.SubPage2">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="sub page 2"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Button x:Name="btnBack" Text="Back" Clicked="OnClick"/>
-        </StackLayout>
+        <!-- Requires a responsive web page to link to -->
+        <WebView Source="https://www.google.com"/>
+
     </ContentPage.Content>
 </ContentPage>
+    
+    
+    

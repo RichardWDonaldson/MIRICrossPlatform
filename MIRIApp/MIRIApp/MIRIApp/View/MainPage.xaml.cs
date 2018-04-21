@@ -29,6 +29,10 @@ namespace MIRIApp
                     break;
 
                 case "WE":
+                    await Navigation.PushAsync(new SubPage2());
+                    break;
+
+                case "BR":
                     await Navigation.PushAsync(new SubPage3());
                     break;
 
