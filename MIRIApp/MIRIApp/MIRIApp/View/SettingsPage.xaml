@@ -3,11 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MIRIApp.SettingsPage">
     <ContentPage.Content>
+        
         <StackLayout>
-            <Label Text="THIS WILL BE A SETTINGS PAGE"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Button x:Name="btnBack" Text="Back" Clicked="OnClick"/>
+            <Grid  BackgroundColor="#804d50a1" Margin="5,5,5,5">
+                <Label HorizontalTextAlignment="Center" Text="This app has been created for use by the UKATC. This app will highlight the European effort that has gone into developing MIRI" TextColor="AntiqueWhite" Grid.ColumnSpan="2" Grid.Row="1" />
+                <Label HorizontalTextAlignment="Center" Text="This app has been created for SOC09109 Group Project module for Edinburgh Napier University " TextColor="AntiqueWhite" Grid.ColumnSpan="2" Grid.Row="2" />
+                <Label HorizontalTextAlignment="Center" Text="Developed by Brian Cleland, Alex Barker and Richard Donaldson" TextColor="AntiqueWhite" Grid.ColumnSpan="2" Grid.Row="4" />
+                <Label HorizontalTextAlignment="Center" Text="Design created by Fraser Rae" TextColor="AntiqueWhite" Grid.ColumnSpan="2" Grid.Row="5" />
+                <Label HorizontalTextAlignment="Center" Text="Project Manager John Morrison" TextColor="AntiqueWhite" Grid.ColumnSpan="2" Grid.Row="6" />
+                <Label HorizontalTextAlignment="Center" Text="Version 1.0" TextColor="AntiqueWhite" Grid.ColumnSpan="2" Grid.Row="7" />
+            </Grid>
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>
