@@ -32,14 +32,22 @@ namespace MIRIApp
 
         protected override void OnAppearing()
         {
+            
+
+
             if(!state)
             {
-               
-               ScanningPage();
+                QRCode.IsVisible = false;
+
                 state = true;
+                ScanningPage();
+               
 
             } else
             {
+                
+                QRCode.IsVisible = true;
+                
                 //Navigation.PopAsync();
             }
          }
@@ -47,9 +55,10 @@ namespace MIRIApp
 
         private async void ScanningPage()
         {
-            List<Collaborator> list = await App.Database.GetCollaboratorAsync();
+           
             var scannerPage = new ZXingScannerPage();
             await Navigation.PushAsync(scannerPage);
+            List<Collaborator> list = await App.Database.GetCollaboratorAsync();
 
             scannerPage.OnScanResult += (result) =>
             {
@@ -145,9 +154,9 @@ namespace MIRIApp
 
         protected override bool OnBackButtonPressed()
         {
-           // Navigation.PopAsync();
+            Navigation.PopAsync();
                 
-            Navigation.PushAsync(new MainPage());
+          //  Navigation.PushAsync(new MainPage());
             base.OnBackButtonPressed();
             return false;
          }
