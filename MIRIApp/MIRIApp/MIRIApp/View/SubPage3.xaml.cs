@@ -13,14 +13,9 @@ namespace MIRIApp
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SubPage3 : ContentPage
 	{
-
-       
-
         public SubPage3 ()
 		{
-			InitializeComponent ();
-
-
+            InitializeComponent ();
         }
 
         protected override void OnAppearing()

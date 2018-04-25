@@ -19,7 +19,7 @@ namespace MIRIApp.Model
 
         public string description { get; set; }
 
-        public int images { get; set; }
+        public string images { get; set; }
 
         public override string ToString()
         {

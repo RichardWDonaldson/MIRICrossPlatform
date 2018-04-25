@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+using Android.Content.Res;
+using Android.Widget;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,15 +15,14 @@ namespace MIRIApp.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ItemPage : ContentPage
 	{
-		public ItemPage ()
-		{
+        public ItemPage()
+        {
             Title = "Collaborator";
-
             InitializeComponent();
 
 
         }
 
-       
     }
+
 }

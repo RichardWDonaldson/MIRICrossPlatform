@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <array name="images1">
+    <item>@drawable/ic_camera</item>
+    <item>@drawable/ic_info</item>
+    <item>@drawable/ic_list</item>
+  </array>
+</resources>
