@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using SQLite;
 using MIRIApp.Model;
@@ -8,7 +7,7 @@ using MIRIApp.Model;
 
 namespace MIRIApp.Data
 {
-  public class CollabDatabase
+    public class CollabDatabase
     {
       public readonly SQLiteAsyncConnection database;
         private List<Collaborator> collaboratorList;

@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <Reference Include="Mono.Android">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
 
@@ -25,17 +25,11 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="View\MainPage.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
-    <Compile Update="View\subPage4.xaml.cs">
-      <DependentUpon>SubPage4.xaml</DependentUpon>
-    </Compile>
     <Compile Update="View\subPage3.xaml.cs">
       <DependentUpon>SubPage3.xaml</DependentUpon>
     </Compile>
     <Compile Update="View\subPage2.xaml.cs">
       <DependentUpon>SubPage2.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="View\subPage1.xaml.cs">
-      <DependentUpon>SubPage1.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
