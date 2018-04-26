@@ -56,9 +56,6 @@
     <PackageReference Include="Xamarin.Android.Support.v4" Version="25.4.0.2" />
     <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="25.4.0.2" />
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="25.4.0.2" />
-    <PackageReference Include="Xamarin.Forms.CarouselView">
-      <Version>2.3.0-pre2</Version>
-    </PackageReference>
     <PackageReference Include="ZXing.Net.Mobile">
       <Version>2.3.2</Version>
     </PackageReference>
@@ -97,7 +94,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\hexagon.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\Backgr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_button.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Obser1.jpg" />
@@ -122,33 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_language.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\arrays.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\a1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\a2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\a3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\a4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\a5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\a6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\a7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\a8.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

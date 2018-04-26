@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CarouselView.FormsPlugin" Version="5.2.0" />
     <PackageReference Include="sqlite-net-pcl" Version="1.4.118" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
     <PackageReference Include="ZXing.Net.Mobile" Version="2.3.2" />
@@ -17,12 +16,15 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD:Source Code/MIRIApp/MIRIApp/MIRIApp.csproj
     <Reference Include="Mono.Android">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
 
   <ItemGroup>
+=======
+>>>>>>> parent of 44bf61f... Added image tiles:MIRIApp/MIRIApp/MIRIApp/MIRIApp.csproj
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>

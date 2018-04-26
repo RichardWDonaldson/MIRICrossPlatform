@@ -10,8 +10,7 @@ namespace MIRIApp
 	{
 		public SettingsPage ()
 		{
-            Title = "About";
-            InitializeComponent ();
+			InitializeComponent ();
 		}
 
         async void OnClick(object Sender, EventArgs e)
