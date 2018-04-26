@@ -76,7 +76,7 @@ namespace MIRIApp.Data
                 "temperature each time the POM is heated up for decontamination. The CCC will be used further as an optical shutter " +
                 "for dark sky calibration and for the protection against latency images which might emerge from coronagraphic filter " +
                 "changes.",
-                images = 4
+                images = "a1",
             },
 
 
@@ -89,7 +89,7 @@ namespace MIRIApp.Data
                 description = "The MIRI photodetectors are composed of semiconductor material that creates free charge carriers (i.e., electrons) " +
                 "when photons are absorbed. These arsenic-doped silicon impurity band conduction (Si:As IBC) devices are sensitive to electromagnetic " +
                 "radiation from 5 to 28.5 micrometres.",
-                images = 2
+                images = "a2",
             },
 
 
@@ -100,7 +100,7 @@ namespace MIRIApp.Data
                 city = "Leige",
                 country = "Belgium",
                 description = "To interface and provide control to all instrument systems.",
-                images = 4
+                images = "a3",
             },
 
 
@@ -114,7 +114,7 @@ namespace MIRIApp.Data
                 "field of view, and a detector plate scale of 0.11' / pixel(Bouchet et al. 2015).The MIRI imaging mode also supports the use of detector subarrays for " +
                 "bright targets, as well as a variety of dither patterns that could improve sampling at the shortest wavelengths, remove detector artifacts and cosmic ray hits, " +
                 "and facilitate self - calibration.",
-                images = 3
+                images = "a4",
             },
 
 
@@ -127,7 +127,7 @@ namespace MIRIApp.Data
                 description = "This unit takes the light from the telescope and divides and correctly formats the beam for the Imager and Spectrometer subsystems. " +
                 "It also contains a Contamination Control Cover mechanism (provides by the Paul Scherrer Institute (PSI) in Switzerland) which ensure the sensitive optical " +
                 "surface stay clean throughout the mission",
-                images = 1
+                images = "a5",
             },
 
 
@@ -143,7 +143,7 @@ namespace MIRIApp.Data
                 "than the passively cooled rest of JWST at a temperature of ~ 40 K, implying additional challenges. The main requirements for the three mechanisms with up " +
                 "to 18 positions on the filter wheel (see Fig. 1) include: reliable operation at T ~ 7 K, optical precision of < 4 arcsec, low power dissipation, vibration " +
                 "capability up to 13.5 Grms and full functionality in the temperature range 6 K < T < 300 K",
-                images = 2
+                images = "a6",
             },
 
 
@@ -154,7 +154,7 @@ namespace MIRIApp.Data
                 city = "Various",
                 country = "Various",
                 description = "All the optics put together",
-                images = 3
+                images = "a7",
             },
 
 
@@ -165,7 +165,7 @@ namespace MIRIApp.Data
                 city = "Madrid",
                 country = "Spain",
                 description = "Deliver a test beam to MIRI similar to the output beam of the JWST and in similar conditions to the flight",
-                images = 1
+                images = "a8",
             }
 
 

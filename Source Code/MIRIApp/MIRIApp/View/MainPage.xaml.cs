@@ -8,7 +8,8 @@ namespace MIRIApp
 	{
 		public MainPage()
 		{
-			InitializeComponent();
+            Title = "MIRI";
+            InitializeComponent();
 		}
 
         async void OnClick(object Sender, EventArgs e)
